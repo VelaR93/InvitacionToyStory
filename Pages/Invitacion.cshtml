@@ -1,0 +1,76 @@
+﻿@page
+@model InvitacionModel
+@{
+    ViewData["Title"] = "Detalles del evento";
+}
+
+<main class="invite">
+    <div class="clouds-bg" aria-hidden="true"></div>
+
+    <!-- Audio VA AQUÍ -->
+    <audio id="bgAudio" preload="auto" loop>
+        <source src="~/audio/AmigoFiel.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button id="btnMute" class="btn btn--ghost" type="button" aria-pressed="true">
+        Activar música
+    </button>
+
+
+
+    <section class="screen screen--active" aria-label="Detalles del evento">
+        <div class="invite-text">
+            <h2 class="invite-title">The toys are ready! 🚀</h2>
+
+            <p class="invite-paragraph">
+                ¡Woody, Buzz, y todos los juguetes quieren darte ya la bienvenida
+                a una muy especial celebración llena de imaginación
+                amistad y diversión!
+            </p>
+
+            <p class="invite-paragraph">
+                ¡Festegemos el cumpleaños de <strong>DAVID</strong>,
+                compartiendo juegos, risas e inolvidables aventuras!
+            </p>
+
+            <p class="invite-paragraph">
+                📅 <strong>Sábado 21 de febrero del 2026</strong><br />
+                ⏰ <strong>4:00 PM</strong>
+            </p>
+
+            <p class="invite-paragraph">
+                📍 <strong>Jardín de Andy:</strong><br />
+                <a class="map-link"
+                   href="https://maps.app.goo.gl/WAzYkLyjr3jkBCzb9"
+                   target="_blank"
+                   rel="noopener">
+                    Abrir en Google Maps
+                </a>
+            </p>
+
+            <p class="invite-paragraph">
+                ¡Trae contigo tu espíritu de explorador y prepárate
+                para una aventura fuera de este mundo!
+                
+            </p>
+
+            <div class="invite-actions">
+                <a class="btn btn--rsvp"
+                   href="https://docs.google.com/forms/d/e/1FAIpQLScQEMwGsyqLoPz5FwII-CLc3tgqqkMdI4T-O_5QCJa7n7icug/viewform?usp=publish-editor"
+                   target="_blank"
+                   rel="noopener">
+                    Confirma tu asistencia
+                </a>
+            </div>
+
+            <!-- Botón pequeño de música -->
+            <button id="btnMute"
+                    class="btn btn--ghost btn--music"
+                    type="button"
+                    aria-pressed="false">
+                Activar música
+            </button>
+        </div>
+    </section>
+
+</main>
