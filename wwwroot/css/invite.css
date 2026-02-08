@@ -11,7 +11,14 @@
     display: grid;
     place-items: center;
     padding: 16px;
+    overflow: hidden;
 }
+/* Portada: pantalla fija sin scroll extra */
+.invite--fixed {
+    height: 100vh; /* fuerza altura exacta del viewport */
+    overflow: hidden; /* evita que se pueda "bajar de más" */
+}
+
 
 
 /* Fondo de nubes (suavizado) */
@@ -185,6 +192,12 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 /* =========================
    Alien decorativo (top-left)
    ========================= */
@@ -291,5 +304,69 @@
         right: -16vw;
         bottom: -10vh;
         opacity: 0.75;
+    }
+}
+
+/* =========================
+   Jessie (top-right)
+   ========================= */
+
+.character--jessie {
+    position: absolute;
+    z-index: 1; /* detrás del texto */
+    top: -4vh;
+    right: -4vw;
+    max-width: 30vw;
+    max-height: 40vh;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .character--jessie {
+        max-width: 38vw;
+        top: -6vh;
+        right: -8vw;
+        opacity: 0.9;
+    }
+}
+
+/* Móvil */
+@media (max-width: 420px) {
+    .character--jessie {
+        max-width: 46vw;
+        top: -8vh;
+        right: -14vw;
+        opacity: 0.75;
+    }
+}
+
+/* =========================
+   Imagen superior Invitación
+   ========================= */
+
+.invite-hero-image {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    margin: 12px auto 16px;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .invite-hero-image {
+        max-width: 440px;
+        margin-top: 8px;
+    }
+}
+
+/* Móvil */
+@media (max-width: 420px) {
+    .invite-hero-image {
+        max-width: 90%;
+        margin-top: 4px;
     }
 }
