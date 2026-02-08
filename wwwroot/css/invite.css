@@ -6,14 +6,13 @@
 
 /* Contenedor principal */
 .invite {
-    min-height: 100vh;
     position: relative;
+    min-height: 100vh;
     display: grid;
-    place-items: start center; /* arriba + centrado horizontal */
-
-    padding: 18px;
-    overflow: hidden;
+    place-items: center;
+    padding: 16px;
 }
+
 
 /* Fondo de nubes (suavizado) */
 .clouds-bg {
@@ -55,12 +54,13 @@
 
 /* Bloque de presentación (texto sobre fondo) */
 .hero {
-    width: 100%;
-    max-width: 560px;
+    position: relative;
+    z-index: 2;
     text-align: center;
-    margin-top: 18px; /* ajusta qué tan arriba */
-    padding: 8px 8px;
+    max-width: 560px;
 }
+
+
 
 /* Estilo Toy Story del título */
 .hero-title {
@@ -183,5 +183,113 @@
 
     .main-actions {
         grid-template-columns: 1fr 1fr;
+    }
+}
+/* =========================
+   Alien decorativo (top-left)
+   ========================= */
+
+.character {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Alien arriba a la izquierda */
+.character--alien {
+    top: -4vh;
+    left: -4vw;
+    max-width: 32vw;
+    max-height: 40vh;
+}
+
+/* Ajustes para tablet */
+@media (max-width: 768px) {
+    .character--alien {
+        max-width: 40vw;
+        top: -6vh;
+        left: -8vw;
+        opacity: 0.9;
+    }
+}
+
+/* Ajustes para móvil */
+@media (max-width: 420px) {
+    .character--alien {
+        max-width: 48vw;
+        top: -8vh;
+        left: -14vw;
+        opacity: 0.75;
+    }
+}
+
+/* =========================
+   Slinky Dog (bottom-left)
+   ========================= */
+
+.character--dog {
+    position: absolute;
+    z-index: 1; /* detrás del texto */
+    left: -6vw;
+    bottom: -6vh;
+    max-width: 38vw;
+    max-height: 35vh;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .character--dog {
+        max-width: 46vw;
+        bottom: -8vh;
+        left: -10vw;
+        opacity: 0.9;
+    }
+}
+
+/* Móvil */
+@media (max-width: 420px) {
+    .character--dog {
+        max-width: 55vw;
+        bottom: -10vh;
+        left: -16vw;
+        opacity: 0.75;
+    }
+}
+
+/* =========================
+   Rex (bottom-right)
+   ========================= */
+
+.character--rex {
+    position: absolute;
+    z-index: 1; /* detrás del texto */
+    right: -6vw;
+    bottom: -6vh;
+    max-width: 36vw;
+    max-height: 34vh;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .character--rex {
+        max-width: 44vw;
+        right: -10vw;
+        bottom: -8vh;
+        opacity: 0.9;
+    }
+}
+
+/* Móvil */
+@media (max-width: 420px) {
+    .character--rex {
+        max-width: 52vw;
+        right: -16vw;
+        bottom: -10vh;
+        opacity: 0.75;
     }
 }
