@@ -101,13 +101,13 @@
 
 /* Texto legible sobre fondo */
 .hero-text {
-    margin-top: 14px;
-    font-size: clamp(1.05rem, 3.4vw, 1.25rem);
-    font-weight: 700;
-    line-height: 1.35;
-    color: rgba(255,255,255,0.98);
-    text-shadow: 0 3px 12px rgba(0,0,0,0.38);
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.4;
+    /* Contraste real contra nubes */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45), 0 0 1px rgba(0, 0, 0, 0.4);
 }
+
 
 /* Botón base (lo usaremos luego) */
 .btn {
